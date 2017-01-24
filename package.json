@@ -1,0 +1,19 @@
+{
+  "name": "ui_projects3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kg13/ui_projects3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kg13/ui_projects3/issues"
+  },
+  "homepage": "https://github.com/kg13/ui_projects3#readme"
+}
