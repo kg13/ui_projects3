@@ -1,0 +1,46 @@
+<form>
+<div class="row">
+    <div class="col-md-2">
+       Class Title
+    </div>
+        <div class="col-md2">
+            <input type ="text" ng-model="formModels.title">
+        </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Class Limit
+    </div>
+        <div class="col-md2">
+            <input type ="text" ng-model="formModels.classlimit">
+        </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Description
+    </div>
+        <div class="col-md2">
+            <input type ="text" ng-model="formModels.description">
+        </div>
+</div>
+<br>
+<button class="btn btn-success" ng-click=add()>Submit</button>
+<br>
+</form>
+<table class="table table-striped">
+        <tr>
+            <th>ClassId</th>
+            <th>Title</th>
+            <th>Class Limit</th>
+            <th>Description</th>
+        </tr>
+           <tr ng-repeat="x in classList|filter:search|orderBy:['classid']">
+                    <td>{{x.classid}}</td>
+                    <td>{{x.title}}</td>
+                    <td>{{x.classlimit}}</td>
+                    <td>{{x.description}}</td>
+                <td>
+                     <button class="btn btn-primary" ng-click="update(x.teacherid)">Update</button>
+                    <button class="btn btn-danger"ng-click="delete(x.teacherid)">Delete</button></td>
+                </tr>
+</table>

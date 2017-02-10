@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>angular ui routing</title>
+	<base href="/">
+	<link rel="stylesheet" src="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+</head>
+
+<body>
+
+	<h1>UI Routing</h1>
+	<ul style="list-style: none">
+		<li><a href="#" ='home'>Home</a></li>
+		<li><a ui-href='form'>Form</a></li>
+		<li><a ui-href='table'>Table</a></li>
+		<li><a ui-href='error'>Error</a></li>
+		<li><a ui-href='test'>Test</a></li>
+	</ul>
+	<div ui-view></div>
+   <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+   <script type="text/javascript" src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+   <script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+   <script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+   <script type="text/javascript" src="/scripts/app.js"></script>
+</body>
+</html>

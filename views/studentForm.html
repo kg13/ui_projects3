@@ -1,0 +1,78 @@
+<form class="form-group">
+     <div class="row">
+         <div class="col-md-2">
+            First Name
+         </div>
+         <div class="col-md2">
+            <input type ="text" ng-model="formModels.firstname">
+         </div>
+     </div> 
+     <div class="row">
+         <div class="col-md-2">
+            Last Name
+         </div>
+         <div class="col-md2">
+            <input type ="text" ng-model="formModels.lastname">
+         </div>
+     </div>
+     <div class="row">
+          <div class="col-md-2">
+             Address
+          </div>
+          <div class="col-md2">
+              <input type ="text" ng-model="formModels.address">
+          </div>
+     </div>
+     <div class="row">
+         <div class="col-md-2">
+             Phone
+         </div>
+         <div class="col-md2">
+             <input type ="number" ng-model="formModels.phonenumber">
+         </div>
+     </div>
+     <div class="row">
+         <div class="col-md-2">
+             Email
+         </div>
+         <div class="col-md2">
+             <input type ="text" ng-model="formModels.email">
+         </div>
+     </div>
+     <div class="row">
+          <div class="col-md-2">
+              SSN
+          </div>
+          <div class="col-md2">
+              <input type ="number" ng-model="formModels.ssn">
+          </div>
+     </div>
+       <br>
+            <button class="btn btn-success" ng-click=add()>submit</button>
+       <br>
+</form>
+   <table class="table table-striped">
+      <tr>
+        <th>StudentId</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>SSN</th>
+      </tr>
+                
+   <tr ng-repeat="x in studentList|filter:search|orderBy:['studentid']">
+         <td>{{x.studentid}}</td>
+         <td>{{x.firstname}}</td>
+         <td>{{x.lastname}}</td>
+         <td>{{x.address}}</td>
+         <td>{{x.phonenumber}}</td>
+         <td>{{x.email}}</td>
+         <td>{{x.ssn}}</td>
+           <td>
+             <button class="btn btn-primary" ng-click="update(x.studentid)">Update</button>
+             <button class="btn btn-danger"ng-click="delete(x.studentid)">Delete</button>
+           </td>
+    </tr>
+    </table>

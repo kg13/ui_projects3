@@ -1,0 +1,28 @@
+<form>
+<div>
+  Session ID
+    <select ng-model="formModels.sessionid" >
+       <option ng-repeat="a in sessionList" value={{a.sessionid}}>{{a.sessiontitle}}</option>
+    </select>
+</div>
+    <div>
+  Student ID
+      <select ng-model="formModels.studentid"> 
+          <option ng-repeat="a in studentList" value={{a.studentid}}>{{a.firstname}}</option>
+    </select>
+    </div>
+    <br>
+    <button class="btn btn-success" ng-click="add()">Submit</button>
+    <br>
+        <table class="table table-striped">
+                <tr>
+                    <th>Batch Id</th>
+                    <th>Session Id</th>
+                    <th>Student Id</th>
+                 </tr>
+            <tr ng-repeat="x in batchList">
+                <td>{{x.batchid}}</td>
+                <td>{{getsessionname(x.sessionid)}}</td>
+                <td>{{getstudentname(x.studentid)}}</td>
+         </table>
+</form>

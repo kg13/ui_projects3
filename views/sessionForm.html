@@ -1,0 +1,83 @@
+<form>
+<div class="row">
+    <div class="col-md-2">
+        Session Title
+    </div>
+    <div class="dropdown">
+        <select ng-model="formModels.sessiontitle" ng-options="x for x in names"></select>
+    </div>
+</div>
+    <div class="row">
+    <div class="col-md-2">
+        Start Date
+    </div>
+    <div class="dropdown">
+       <select ng-model="formModels.startdate" ng-options="x for x in startdates">
+</select> 
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        End Date
+    </div>
+    <div class="dropdown">
+       <select ng-model="formModels.enddate" ng-options="x for x in enddates">
+</select> 
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Start Time
+    </div>
+    <div class="dropdown">
+       <select ng-model="formModels.starttime" ng-options="x for x in starttime">
+</select> 
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        Class ID
+    </div>
+   <div class="dropdown">
+       <select ng-model="formModels.classid" >
+       <option ng-repeat="i in classList" value={{i.classid}}>{{i.title}}</option>
+       </select>
+</div>
+    </div>
+<div class="row">
+    <div class="col-md-2">
+        Teacher
+    </div>
+<div class="dropdown">
+      <select ng-model="formModels.teacherid" >
+       <option ng-repeat="i in teacherList" value={{i.teacherid}}>{{i.firstname}}</option>
+    </select>
+</div>
+</div>
+    
+<br>
+            <button class="btn btn-success" ng-click=add()>submit</button>
+<br>
+    
+</form>
+        <table class="table table-striped">
+                <tr>
+                    <th>Session Id</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Start Time</th>
+                    <th>Class Title</th>
+                    <th>Teacher</th>
+                    <th>Session Title</th>
+                 </tr>
+                
+                <tr ng-repeat="x in sessionList">
+                    <td>{{x.sessionid}}</td>
+                    <td>{{x.startdate|date:'yyyy-MM-dd'}}</td>
+                    <td>{{x.enddate|date:'yyyy-MM-dd'}}</td>
+                    <td>{{x.starttime}}</td>
+                    <td>{{getclassname(x.classid)}}</td>
+                    <td>{{getteachername(x.teacherid)}}</td>
+                    <td>{{x.sessiontitle}}</td>
+                </tr>
+            </table>

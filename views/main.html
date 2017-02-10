@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <title>Ui Project</title>
+        <base href="/">
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+    </head>
+    <body>
+      <ul style="List-style: none" class="navbar">
+        <li><a ui-sref='student'>Student</a></li> 
+        <li><a ui-sref='teacher'>Teacher</a></li>
+        <li><a ui-sref='class'>Class</a></li>
+        <li><a ui-sref='session'>Session</a></li> 
+        <li><a ui-sref='batch'>Batch</a></li>
+      </ul>
+         <div ui-view></div>
+        
+        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+        <script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+        <script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+        <script type="text/javascript" src="/scripts/app.js"></script>
+        <script type="text/javascript" src="/scripts/controllers/batchCtrl.js"></script>
+        <script type="text/javascript" src="/scripts/services/batchHttp.js"></script>
+        <script type="text/javascript" src="/scripts/controllers/classCtrl.js"></script>
+        <script type="text/javascript" src="/scripts/services/classHttp.js"></script>
+        <script type="text/javascript" src="/scripts/controllers/sessionCtrl.js"></script>
+        <script type="text/javascript" src="/scripts/services/sessionHttp.js"></script>   
+        <script type="text/javascript" src="/scripts/controllers/studentCtrl.js"></script>
+        <script type="text/javascript" src="/scripts/services/studentHttp.js"></script>
+        <script type="text/javascript" src="/scripts/controllers/teacherCtrl.js"></script>
+        <script type="text/javascript" src="/scripts/services/teacherHttp.js"></script>
+             
+    </body>
+</html>
