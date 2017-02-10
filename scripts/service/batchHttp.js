@@ -33,7 +33,7 @@ angular.module("app").service("batchHttp",["$http",function($http){
              url:"/service/batch/"+batchid,
          }).then(function(result){
              return result.status;
-         })
+         });
      }
      this.updatebatchList=function(dataParam,batchId){
          return $http({

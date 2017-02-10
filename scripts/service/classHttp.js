@@ -32,7 +32,7 @@ angular.module("app").service("classHttp",["$http",function($http){
              url:"/service/class/"+classId,
          }).then(function(result){
              return result.status;
-         })
+         });
      }
      this.updateclassList=function(dataParam,classId){
          return $http({

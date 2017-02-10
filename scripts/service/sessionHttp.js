@@ -32,7 +32,7 @@ angular.module("app").service("sessionHttp",["$http",function($http){
              url:"/service/session/"+sessionId,
          }).then(function(result){
              return result.status;
-         })
+         });
      }
      this.updateSessionList=function(dataParam,sessionId){
          return $http({
